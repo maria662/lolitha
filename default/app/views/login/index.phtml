@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/lolitha/default/public/css/custom.css">
+<?php View::content(); ?>
+<div class="container" id="container">
+    <?php View::content(); ?>
+    <div class="form-container sign-up-container">
+        <form method="post">
+            <h1>Crear una cuenta</h1>
+
+            <input type="text" name="nuevo_usuario[name]" placeholder="Usuario" />
+            <input type="password" name="nuevo_usuario[pass]" placeholder="Contraseña" />
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form method="post">
+            <h1>Iniciar sesión</h1>
+            <input type="text" name="login[usuario]" placeholder="Usuario" />
+            <input type="password" name="login[password]" placeholder="Contraseña" />
+            <button>Iniciar sesión</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Bienvenido!</h1>
+                <p>Puedes comenzar a usar este sitio iniciando sesión</p>
+                <button class="ghost" id="signIn">Iniciar sesión</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Es una placer conocerte!</h1>
+                <p>Estas apunto de registrarte en un lugar asombroso</p>
+                <button class="ghost" id="signUp">Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/lolitha/default/public/javascript/login.js"></script>

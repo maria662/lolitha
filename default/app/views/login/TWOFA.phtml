@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/lolitha/default/public/css/custom.css">
+<?php View::content(); ?>
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form method="post">
+            <h1>Ingresar código</h1>
+            <input type="text" name="validar[code]" placeholder="Código" />
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>Solo un poco más</h1>
+                <p>Es importante la seguridad, asocia tu cuenta en Google Authenticar App. Puedes escanear la imagen</p>
+                <img src=<?=$img?> alt="">
+            </div>
+        </div>
+    </div>
+</div>

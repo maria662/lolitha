@@ -1,0 +1,47 @@
+<style>
+    .b-1{
+       border: 1px;
+    }
+    .b-primary{
+        border: #5755D9 1px solid;
+    }
+
+    .b-red {
+        border: #E85838 1px solid;
+    }
+</style>
+<header class="navbar p-2">
+    <section class="navbar-section">
+        <a href="#" class="btn btn-link">Proyecto IoT</a>
+    </section>
+    <section class="navbar-center">
+        <!-- centered logo or brand -->
+    </section>
+    <section class="navbar-section">
+        <form method="post">
+            <input type="hidden" name="signout" value="1">
+            <button type="submit" class="btn "><i class="fa fa-sign-out-alt"></i> Cerrar sesión</button>
+        </form>
+    </section>
+</header>
+
+<div class="container" id="app">
+    <p>{{message}}</p>
+    <div class="p-2 columns col-gapless" style="text-align: center">
+        <div class="column col m-2  p-1 b-1" v-for="(asiento, index) in fila1"
+             :class="asiento.class"
+             v-on:click="cambiarEstado(asiento,index)">
+            {{asiento.nombre}}
+        </div>
+    </div>
+    <div style="height: 300px"></div>
+    <div class="p-2 columns col-gapless" style="text-align: center">
+        <div class="column col m-2 p-1 b-primary">A5</div>
+        <div class="column col m-2  p-1 b-primary">A6</div>
+        <div class="column col m-2 p-1 b-primary">A7</div>
+        <div class="column col m-2 p-1 b-primary">A8</div>
+    </div>
+</div>
+
+
+<script src="/lolitha/default/public/javascript/index.js"></script>
